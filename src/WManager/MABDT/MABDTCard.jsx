@@ -121,7 +121,6 @@ function HoverCardWithHeaderExample({ data }) {
         display: 'flex',
         flexDirection: 'column',
         width: '55rem',
-        marginLeft: "0px",
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
         transition: 'transform 0.3s, box-shadow 0.3s',
         borderRadius: '10px',
