@@ -23,7 +23,7 @@ export const getPendingorders = async () => {
 export const getallDeliveredordersBySid = async () => {
     try {
         // console.log(id);
-        const response = await Axios.get(`${url}/api/getallDeliveredordersBySid/${id}`, config);
+        const response = await Axios.get(`${url}/api/supply-order/getallDeliveredordersBySid/${id}`, config);
         console.log(response.data);
         return response.data;
     } catch (error) {
@@ -34,7 +34,7 @@ export const getallDeliveredordersBySid = async () => {
 export const getallcancelledBySid = async () => {
     try {
         // console.log(id);
-        const response = await Axios.get(`${url}/api/getallcancelledBySid/${id}`, config);
+        const response = await Axios.get(`${url}/api/supply-order/getallcancelledBySid/${id}`, config);
         console.log(response.data);
         return response.data;
     } catch (error) {
@@ -45,7 +45,7 @@ export const getallcancelledBySid = async () => {
 export const getallapprovedbutisDTBySid = async () => {
     try {
         // console.log(id);
-        const response = await Axios.get(`${url}/api/getallapprovedbutisDTBySid/${id}`, config);
+        const response = await Axios.get(`${url}/api/supply-order/getallapprovedbutisDTBySid/${id}`, config);
         console.log(response.data);
         return response.data;
     } catch (error) {
@@ -56,7 +56,7 @@ export const getallapprovedbutisDTBySid = async () => {
 export const getallapprovedbutisDFBySid = async () => {
     try {
         // console.log(id);
-        const response = await Axios.get(`${url}/api/getallapprovedbutisDFBySid/${id}`, config);
+        const response = await Axios.get(`${url}/api/supply-order/getallapprovedbutisDFBySid/${id}`, config);
         console.log(response.data);
         return response.data;
     } catch (error) {

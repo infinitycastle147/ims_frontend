@@ -216,7 +216,7 @@ export const totalCompletedW2WOrders = async () => {
 }
 export const ReturnOrderpending = async () => {
     try {
-        const response = await Axios.get(`${url}/api/return-orders/orderstatusPbyDid/${id}`,config);
+        const response = await Axios.get(`${url}/api/return-order/orderstatusPbyDid/${id}`,config);
         return response.data;
     } catch (error) {   
         console.error('Error fetching data:', error);
@@ -225,7 +225,7 @@ export const ReturnOrderpending = async () => {
 }
 export const ReturnOrderShipped = async () => {
     try {
-        const response = await Axios.get(`${url}/api/return-orders/orderstatusSbyDid/${id}`,config);
+        const response = await Axios.get(`${url}/api/return-order/orderstatusSbyDid/${id}`,config);
         return response.data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -234,7 +234,7 @@ export const ReturnOrderShipped = async () => {
 }
 export const ReturnSupplyOrderShipped = async () => {
     try {
-        const response = await Axios.get(`${url}/api/return-supply-orderstatusSByDid/${id}`,config);
+        const response = await Axios.get(`${url}/api/return-supply-order/statusSByDid/${id}`,config);
         return response.data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -245,7 +245,7 @@ export const ReturnSupplyOrderShipped = async () => {
 export const ROChangeStatustoS = async (order) => {
     try {
       
-        const response = await Axios.post(`${url}/api/return-orders/assignBydeliveryman/${id}/data`, null, {
+        const response = await Axios.post(`${url}/api/return-order/assignBydeliveryman/${id}/data`, null, {
             params: {
                 data: order
             },
@@ -295,7 +295,7 @@ export const ROCompleted = async (id1, status) => {
 }
 export const CReturnOrder = async () => {
     try {
-        const response = await Axios.get(`${url}/api/order/orderstatusRbyDid/${id}`,config);
+        const response = await Axios.get(`${url}/api/return-order/orderstatusRbyDid/${id}`,config);
         return response.data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -333,7 +333,7 @@ export const getsupplyorderstatusABDFbyDId = async () => {
 }
 export const CReturnSupplyOrder = async () => {
     try {
-        const response = await Axios.get(`${url}/api/return-supply-orderstatusCByDid/${id}`,config);
+        const response = await Axios.get(`${url}/api/return-supply-order/statusCByDid/${id}`,config);
         return response.data;
     } catch (error) {
         console.error('Error fetching data:', error);
