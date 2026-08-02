@@ -60,7 +60,7 @@ export function LoginForm() {
             password: values?.password,
         });
         
-        if (response?.message?.token) {
+        if (response?.success && response?.message?.token) {
             localStorage.setItem('username', response?.message?.username);
             localStorage.setItem('role', response?.message?.role);
             localStorage.setItem('id', response?.message?.id);
@@ -101,7 +101,7 @@ export function LoginForm() {
         } else {
             Swal.fire({
                 title: "Login failed",
-                text: "Invalid email or password.",
+                text: response?.message || "Invalid email or password.",
                 icon: "error",
             });
         }
